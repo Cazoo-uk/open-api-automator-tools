@@ -5,7 +5,7 @@ info:
   version: 0.0.1
   description: Just an API example.
   contact:
-    name: a team
+    name: The team
     email: a-team@team.co.uk
 servers:
   - url: 'https://www.cazoo-dev.co.uk/api/example-api'

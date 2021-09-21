@@ -1,0 +1,39 @@
+{
+  "name": "consumer-finance-open-api-automator",
+  "version": "1.0.0",
+  "description": "This repository contains an example of how to automate the process to create interfaces, documentation and validation from an open api schema",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "openapi:toTypescriptInterface": "openapi-typescript docs/openapiExample.yml --output types/openApiSchema/openapiExample.ts --prettier-config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cazoo-uk/consumer-finance-open-api-automator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cazoo-uk/consumer-finance-open-api-automator/issues"
+  },
+  "homepage": "https://github.com/Cazoo-uk/consumer-finance-open-api-automator#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unused-imports": "^1.1.4",
+    "js-yaml": "^4.1.0",
+    "openapi-typescript": "^4.0.2",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3",
+    "typescript-eslint": "0.0.1-alpha.0"
+  }
+}

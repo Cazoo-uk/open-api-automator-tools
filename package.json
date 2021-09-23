@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "openapi:toTypescriptInterface": "openapi-typescript docs/openapiExample.yml --output types/openApiSchema/openapiExample.ts --prettier-config",
+    "openapi:generate": "npm run openapi:toTypescriptConst && npm run openapi:toTypescriptInterface",
+    "openapi:toTypescriptInterface": "openapi-typescript docs/openapiExample.yml --output types/openapiSchema/openapiExample.ts --prettier-config",
     "openapi:toTypescriptConst": "ts-node scripts/openApi/convertToTypescriptFile.ts",
     "openapi:checkFiles": "ts-node scripts/openApi/checkYamlConversion.ts"
   },

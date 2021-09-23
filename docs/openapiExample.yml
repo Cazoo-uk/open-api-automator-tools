@@ -57,6 +57,7 @@ components:
         middleName:
           type: string
         age:
+          minimum: 0
           type: number
       required:
         - firstName

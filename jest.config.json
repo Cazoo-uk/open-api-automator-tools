@@ -1,0 +1,19 @@
+{
+    "testEnvironment": "node",
+    "roots": ["<rootDir>"],
+    "transform": {
+        "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": ["<rootDir>/validation/**/*test.ts"],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
+    "collectCoverageFrom": ["src/**/*.ts"],
+    "coveragePathIgnorePatterns": ["<rootDir>/node_modules"],
+    "coverageReporters": ["json", "lcov", "text"],
+    "coverageDirectory": "./reports/coverage",
+    "reporters": [
+        "default",
+        [ "jest-junit",
+          { "outputDirectory": "<rootDir>/reports/test" }
+        ]
+    ]
+}

@@ -26,3 +26,20 @@ openapi-typescript docs/openapiExample.yml --output types/openapiSchema/openapiE
 
 
 ### Validation
+To validate a http request we use a combination of 2 tools
+
+- js-yaml
+- AJV
+#### js-yaml [link](https://github.com/nodeca/js-yaml)
+JS-yaml allow us to convert an open api specification into a json file 
+```js
+const fileData = fs.readFileSync("docs/openapiExample.yml", 'utf8');
+const yamlData = yaml.load(fileData);
+```
+[code link](./scripts/openApi/convertToTypescriptFile.ts) 
+
+#### AJV [link](https://github.com/ajv-validator/ajv)
+
+AJV is a schema validator. You can use your request body and validate it against the schema that we’ve just generated
+
+[code link](./validation/validation.ts)

@@ -1,28 +1,21 @@
-import { getOpenApiTypescriptPath } from './utils/getDocsPath';
-import { convertToTypescript } from './utils/convertToTypescript';
-
+const yaml = require('js-yaml');
 const fs = require('fs');
 
-const yamlsToCheck = process.argv.slice(2);
-
-if (yamlsToCheck.length === 0) {
-    console.error('Error: Please define a set of files to check');
-    process.exit(1);
-}
-
 try {
-    for (const yamlToCheck of yamlsToCheck) {
-        const existingTypescriptPath = getOpenApiTypescriptPath(yamlToCheck);
+    const openapiTsPath = "docs/openapiExample.ts"
+    const openapiPath = "docs/openapiExample.yml"
 
-        const output = fs.readFileSync(existingTypescriptPath, 'utf-8');
-        const openApiOutput = convertToTypescript(yamlToCheck);
+    const currentOutput = fs.readFileSync(openapiTsPath, 'utf8');
 
-        if (output !== openApiOutput) {
-            console.error(
-                `Please regenerate the open api document (${yamlToCheck}) by using npm run convert:yamlToTypescript`
-            );
-            process.exit(1);
-        }
+    const fileData = fs.readFileSync(openapiPath, 'utf8');
+    const yamlData = yaml.load(fileData);
+
+    const output = `export const openapiExample = ${JSON.stringify(yamlData)}`;
+    if (output !== currentOutput) {
+        console.error(
+            `Please regenerate the open api document`
+        );
+        process.exit(1);
     }
 } catch (e) {
     console.error('There was an error while reading the openapi typescript file');

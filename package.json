@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "openapi:toTypescriptInterface": "openapi-typescript docs/openapiExample.yml --output types/openApiSchema/openapiExample.ts --prettier-config"
+    "openapi:toTypescriptInterface": "openapi-typescript docs/openapiExample.yml --output types/openApiSchema/openapiExample.ts --prettier-config",
+    "openapi:toTypescriptConst": "ts-node scripts/openApi/convertToTypescriptFile.ts",
+    "openapi:checkFiles": "ts-node scripts/openApi/checkYamlConversion.ts"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "@types/node": "^16.9.4",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
+    "ajv": "^8.6.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.2",

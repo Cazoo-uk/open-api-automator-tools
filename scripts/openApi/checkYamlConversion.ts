@@ -1,9 +1,9 @@
-const yaml = require('js-yaml');
 const fs = require('fs');
+const yaml = require('js-yaml');
 
 try {
-    const openapiTsPath = "docs/openapiExample.ts"
-    const openapiPath = "docs/openapiExample.yml"
+    const openapiTsPath = 'docs/openapiExample.ts';
+    const openapiPath = 'docs/openapiExample.yml';
 
     const currentOutput = fs.readFileSync(openapiTsPath, 'utf8');
 
@@ -12,9 +12,7 @@ try {
 
     const output = `export const openapiExample = ${JSON.stringify(yamlData)}`;
     if (output !== currentOutput) {
-        console.error(
-            `Please regenerate the open api document`
-        );
+        console.error(`Please regenerate the open api document`);
         process.exit(1);
     }
 } catch (e) {

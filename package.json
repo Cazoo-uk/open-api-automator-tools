@@ -1,5 +1,5 @@
 {
-  "name": "consumer-finance-open-api-automator",
+  "name": "open-api-automator-tools",
   "version": "1.0.0",
   "description": "This repository contains an example of how to automate the process to create interfaces, documentation and validation from an open api schema",
   "main": "index.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cazoo-uk/consumer-finance-open-api-automator.git"
+    "url": "git+https://github.com/Cazoo-uk/open-api-automator-tools.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cazoo-uk/consumer-finance-open-api-automator/issues"
+    "url": "https://github.com/Cazoo-uk/open-api-automator-tools/issues"
   },
-  "homepage": "https://github.com/Cazoo-uk/consumer-finance-open-api-automator#readme",
+  "homepage": "https://github.com/Cazoo-uk/open-api-automator-tools#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^27.0.2",

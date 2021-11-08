@@ -8,11 +8,11 @@ info:
     name: The team
     email: a-team@team.co.uk
 servers:
-  - url: 'https://www.cazoo-dev.co.uk/api/example-api'
+  - url: 'https://www.example-cazoo-dev.co.uk/api/example-api'
     description: Development environment
-  - url: 'https://www.cazoo-test.co.uk/api/example-api'
+  - url: 'https://www.example-cazoo-test.co.uk/api/example-api'
     description: Test environment
-  - url: 'https://www.cazoo.co.uk/api/example-api'
+  - url: 'https://www.example-cazoo.co.uk/api/example-api'
     description: Production environment
 paths:
   /person:

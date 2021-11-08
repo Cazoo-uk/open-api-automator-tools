@@ -6,8 +6,7 @@ class ValidationError extends Error {}
 export const request = (requestBody: components['schemas']['createPersonRequest']) => {
 
     const ajv =  new Ajv({
-        allErrors: true,
-        strict: false
+        allErrors: true
     });
 
     const validateFunction = ajv.compile(openapiExample.components.schemas.createPersonRequest);

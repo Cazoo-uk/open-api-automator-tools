@@ -12,7 +12,7 @@ This file will preload the openapi yml file defined by you, in the example it is
 
 All the necessary swagger-ui dependencies are in the swagger-ui folder.
 
-#### [link](https://animated-guacamole-4777b1e5.pages.github.io/)
+#### [link](https://cazoo-uk.github.io/open-api-automator-tools/)
 
 
 ### Types
